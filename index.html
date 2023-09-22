@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flores Amarillas &lt;3</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <audio id="audio" loop>
+        <source src="mp/flores amarillas !!.mp3" type="audio/mpeg">
+       
+    </audio>
+    <button id="playButton">Reproducir Audio</button>
+    
+    
+    
+
+    <div class="Contenedor-Binicio">
+        <h1>Por si no te dieron tus flores amarillas aquí tienes</h1>
+        <button class="Button" id="BVer"> clic en mi </button>
+    </div>
+
+    <div class="Con-Emergente">
+        <div id="resultado" class="cua">
+            <p id="res">
+                Hola quiero recordarte que eres 
+                muy especial
+            </p>    
+            <button id="BotonCerrar" class="Button">Cerrar</button>
+        </div>
+    </div>
+
+    <div class="Con-2">
+        <h1 id="Titulo"> Elije una Opcion de cuantas quieres </h1>
+        <div class="Con">
+            <button class="Button" id="B1"> 1 Flor </button>
+            <button class="Button" id="B12"> 12 Flores</button>
+        </div>
+    </div>
+
+    <main class="Contenedor">
+        <canvas id="Flor" class="Flor" width="800" height="600"></canvas>
+
+        <div class="Texto">
+            <h2 id="Text">Para la niña mas Linda.</h2>
+        </div>
+
+    </main>
+
+    <script src="Js/app.js"></script>
+    <script src="Js/Dis.js"></script>
+    <script>
+        const audio = document.getElementById("audio");
+        const playButton = document.getElementById("playButton");
+    
+        playButton.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "Pausar Audio";
+            } else {
+                audio.pause();
+                playButton.textContent = "Reproducir Audio";
+            }
+        });
+    </script>
+    
+
+     
+    
+
+</body>
+</html>

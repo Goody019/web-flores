@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+    background: linear-gradient(70deg, #ff69b4, #8a2be2);
+    color: white;
+   
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    color: black; /* Color del texto de los títulos en negro */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 20px 0; /* Espaciado en la parte superior e inferior de los títulos */
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.Con-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.Con-2 button {
+    margin: 60px 0; /* Agrega un espacio vertical entre los botones */
+}
+
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.Con {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.Texto {
+    display: none;
+}
+
+.Texto h2 {
+    font-size: 40px;
+}
+
+
+#B1, #B12, #BVer, #BotonCerrar {
+    font-family: monospace;
+    font-size: x-large;
+    transition-duration: 0.2s;
+    padding: 30px;
+    border-radius: 70px;
+    background-color: orange; /* Color de fondo naranja para todos los botones */
+    color: black; /* Color de texto negro para todos los botones */
+    border: 2px solid black; /* Borde naranja para todos los botones */
+    cursor: pointer;
+}
+
+#B1:hover, #B12:hover, #BVer:hover, #BotonCerrar:hover {
+    transform: scale(1.1);
+    border-radius: 14px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    background-color: white;
+}
+
+.Contenedor-Binicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 100vh; /* Esto asegura que ocupe toda la altura de la ventana */
+
+}
+
+
+
+.Con-Emergente {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.cua {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.5s ease-out;
+}
+.cua #res {
+    color: black; /* Cambia el color del párrafo a negro */
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Estilo para el botón de reproducción */
+#playButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #ff6600; /* Color naranja */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    z-index: 999; /* Colocar encima de otros elementos */
+}
+
+#playButton:hover {
+    background-color: #ff9900; /* Cambio de color al pasar el mouse */
+}
+
+
+@media (max-width: 468px) {
+    h1, h2 {
+        font-size: 30px; /* Tamaño de fuente para títulos en dispositivos móviles */
+    }
+}
+
